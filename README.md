@@ -8,13 +8,22 @@
 
 ## 下载与安装
 
-**[下载 Pageglade 1.0.0](https://github.com/yuwang4321/Pageglade/releases/tag/v1.0.0)**
+**[下载 Pageglade 1.0.4](https://github.com/yuwang4321/Pageglade/releases/tag/v1.0.4)**
 
 适用于 **Apple Silicon Mac（M1 及后续）与 macOS 14+**，当前不提供 Intel Mac 安装包。
 
-1. 在发布页 Assets 中下载 `Pageglade-1.0.0-arm64.dmg`，不要下载自动生成的 Source code 压缩包。
+1. 在发布页 Assets 中下载 `Pageglade-1.0.4-arm64.dmg`，不要下载自动生成的 Source code 压缩包。
 2. 退出旧版，打开 DMG，将 **Pageglade** 拖入 Applications；已有版本选择替换。
 3. 首次打开前阅读 **[安装说明](INSTALL.md)**。当前尚未做 Developer ID 发布签名和 Apple 公证，也未上架 App Store；确认来源并核对 SHA-256 后，按安装说明处理系统提示。无需关闭系统安全保护。
+
+## 1.0.4 更新
+
+- 修复从翻页切换到滚动后，前面的页面无法通过滚动查看的问题。
+- 向上、向下滚动自动接续页面，无需手动调整页数或选择下一组。
+- 改善切换浏览方式、跳转和重新打开书籍时的位置恢复。
+- 包含此前修复的 PDF / 漫画启动白屏和阅读布局切换问题。
+
+查看 **[完整更新说明](CHANGELOG.md)**。本版为 1.0.4（build 22），提供 DMG、SHA-256 校验文件和安装说明。
 
 ## 四个特点
 

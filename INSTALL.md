@@ -1,4 +1,4 @@
-# 页间 · Pageglade 1.0.0 安装与使用
+# 页间 · Pageglade 1.0.4 安装与使用
 
 作者：TaylorWang。适用 Apple Silicon Mac / macOS 14+。应用显示名称 Pageglade；展示 Logo 为绿色繁体“頁間”。
 
