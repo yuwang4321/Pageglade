@@ -2,56 +2,68 @@
 
 ![页间 · Pageglade](banner.png)
 
-**免费的 macOS 本地阅读器：电子书、PDF、漫画共用一个书库，支持多种文件格式与黑白水墨阅读主题。**
+免费的 macOS 本地阅读器。电子书、PDF、漫画共用一个书库，支持多种文件格式与类似 Kindle 的黑白水墨阅读主题。
 
-由 TaylorWang 开发。无需注册阅读账号，书籍与阅读记录保存在本机。
+作者 **TaylorWang**。无需注册阅读账号，书籍与阅读记录保存在本机。
 
 ## 下载与安装
 
-**[下载 Pageglade 1.0.4](https://github.com/yuwang4321/Pageglade/releases/tag/v1.0.4)**
+**[下载最新正式版 1.6.6](https://github.com/yuwang4321/Pageglade/releases/tag/v1.6.6)** · [安装说明](INSTALL.md) · [完整更新记录](CHANGELOG.md)
 
-适用于 **Apple Silicon Mac（M1 及后续）与 macOS 14+**，当前不提供 Intel Mac 安装包。
+适用于 **Apple Silicon Mac（M1 及后续）与 macOS 14+**，当前不提供 Intel 安装包。
 
-1. 在发布页 Assets 中下载 `Pageglade-1.0.4-arm64.dmg`，不要下载自动生成的 Source code 压缩包。
-2. 退出旧版，打开 DMG，将 **Pageglade** 拖入 Applications；已有版本选择替换。
-3. 首次打开前阅读 **[安装说明](INSTALL.md)**。当前尚未做 Developer ID 发布签名和 Apple 公证，也未上架 App Store；确认来源并核对 SHA-256 后，按安装说明处理系统提示。无需关闭系统安全保护。
+下载发布页 Assets 中的 `Pageglade-1.6.6-arm64.dmg` 和 SHA-256 校验文件。退出旧版，将 DMG 中的 Pageglade 拖入 Applications 并选择替换。不要用自动生成的 Source code 压缩包安装应用。
 
-## 1.0.4 更新
+本版未做 Developer ID 发行签名或 Apple 公证，也未上架 App Store。首次打开请核对来源，参考安装说明，无需关闭系统安全保护。
 
-- 修复从翻页切换到滚动后，前面的页面无法通过滚动查看的问题。
-- 向上、向下滚动自动接续页面，无需手动调整页数或选择下一组。
-- 改善切换浏览方式、跳转和重新打开书籍时的位置恢复。
-- 包含此前修复的 PDF / 漫画启动白屏和阅读布局切换问题。
+## 一个书库，持续阅读
 
-查看 **[完整更新说明](CHANGELOG.md)**。本版为 1.0.4（build 22），提供 DMG、SHA-256 校验文件和安装说明。
+- **电子书、PDF、漫画统一管理**：封面、标签、收藏、历史、继续阅读与多文件标签页。
+- **多格式**：PDF、EPUB、TXT、无 DRM MOBI/AZW/AZW3/PRC，漫画压缩包和图片文件夹。
+- **适合自己的显示方式**：单页/双页、翻页/滚动、按屏分页、缩放、字号、章节目录与缩略图。
+- **专注阅读**：单行沉浸工具栏、黑白水墨主题、古籍竖排与稳定轮换纸纹。
+- **中英文界面**：中文、英文或跟随系统；书籍原文不翻译。
+- **轻量整理**：直观的未读/在读/已读状态，手动调整优先，本地阅读数据备份。
 
-## 四个特点
+## 摘录与摘录集
 
-| 特点 | 可以做什么 |
-|---|---|
-| 一个本地书库 | 电子书、PDF、漫画统一收藏、添加标签、查看历史和继续阅读 |
-| 多种文件格式 | PDF、EPUB、TXT、无 DRM MOBI/AZW/AZW3/PRC，漫画压缩包与图片文件夹 |
-| 免费 macOS 应用 | 免费使用，无需注册阅读账号，阅读数据保存在本机 |
-| 黑白水墨主题 | 白底黑字、图片灰阶，类似 Kindle 的黑白阅读风格；属于软件显示主题 |
+保存文字、图片和想法，在独立摘录页统一回顾。新摘录默认沿用来源书籍标签，支持多标签任一/全部筛选。
 
-支持单页/双页、翻页/滚动、缩略图、章节目录、缩放与原尺寸、多文件标签页和沉浸阅读。新书继承默认阅读设置，调整后自动记住本书配置。书签与目录分开管理，支持跳转、删除与返回跳转前的位置。另有古籍竖排、轮换纸纹与淡化印章风格。
+多选内容创建摘录集，加入已有集合并拖动排序，重读时可查看原文并返回原位置。支持 **PDF、EPUB、Markdown** 导出；图片 Markdown 使用 ZIP 携带图片。
 
-### 支持格式
+摘录与摘录集分别展示，集合保存后保持固定内容。1.6.6 修复创建过程中标签切换未取消不匹配勾选的问题，保存前再次校验。
 
-- 电子书与文档：PDF、EPUB、TXT、无 DRM 的 MOBI、AZW、AZW3、PRC。
+## 1.6.6 正式发布
+
+本次汇总 1.0.4 之后的阅读、摘录和书库更新：
+
+- 摘录集独立入口、图片摘录、共享标签、排序与导出。
+- 按屏分页、中英文界面和单行沉浸图标工具栏。
+- 自动阅读状态与撤销，精简书籍操作菜单。
+- 修复标签滚动条交互、菜单遮挡、图片捕获误唤出工具栏及集合筛选遗漏。
+
+[查看发布说明](RELEASE.md)
+
+## 支持格式与限制
+
+- 电子书与文档：PDF、EPUB、TXT、无 DRM MOBI/AZW/AZW3/PRC。
 - 漫画与图片：ZIP/CBZ、RAR/CBR、7Z/CB7、图片文件夹。
-- 其他：FB2，以及 HTML、RTF、DOCX 的文字读取；复杂排版可能丢失。
+- 其他：FB2；HTML、RTF、DOCX 的文字读取，复杂排版可能丢失。
 
-本地发行版内置 calibre，Kindle 格式直接解析正文、图片和封面，不转成 EPUB；FB2 在本地转换。无需另行安装 calibre。相关许可与对应版本源码随 DMG 提供。
+本地版内置 calibre：Kindle 直接解析正文、图片和封面，不转成 EPUB；FB2 本地转换。组件许可及对应源码随 DMG 提供，无需另行安装 calibre。
 
-## 已知限制
+不支持 DRM、KFX、DJVU、CHM、AZW4，没有 OCR 或云同步。扫描页没有可搜索正文；复杂或损坏文件可能有兼容性问题。水墨为软件显示主题，不是电子墨水屏硬件，也不承诺护眼效果。
 
-不支持 DRM、KFX、DJVU、CHM、AZW4；没有 OCR 或云同步。扫描页没有可搜索正文。复杂书籍、异常文件可能有兼容性问题。水墨为显示主题，不是电子墨水屏硬件，也不承诺护眼效果。
+## English
 
-## 反馈
+Pageglade is a free local macOS reader for ebooks, PDFs and comics. It offers a shared library, Chinese/English interface, immersive reading, monochrome styling, text/image excerpts and ordered collections with PDF/EPUB/Markdown export.
 
-欢迎通过 **[Issues](https://github.com/yuwang4321/Pageglade/issues)** 提交问题或建议，请提供 macOS 版本、应用版本、文件格式、操作步骤与截图。请不要公开上传未经授权的整本书籍，可优先使用自制最小样例。
+Requires Apple Silicon and macOS 14+. The current DMG is not Developer ID signed or notarized. See [installation instructions](INSTALL.md) and [release notes](RELEASE.md).
 
-当前仓库提供介绍和发行资料，暂不包含应用源码。免费使用不代表项目按开源许可证发布，第三方组件仍遵循各自许可证。
+## 反馈与仓库范围
 
-应用名称为 **Pageglade**，中文品牌为“页间”，Logo 使用繁体“頁間”。
+欢迎通过 [Issues](https://github.com/yuwang4321/Pageglade/issues) 提交问题或建议，提供 macOS 版本、应用版本、文件格式、操作步骤与截图。请不要公开上传未经授权的整本书籍，可使用自制最小样例。
+
+当前仓库提供介绍和发行资料，**不包含 Pageglade 应用源码**。免费使用不代表项目按开源许可证发布，第三方组件遵循各自许可证。
+
+应用名称 Pageglade，中文品牌「页间」，Logo 使用繁体「頁間」。

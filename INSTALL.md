@@ -1,37 +1,49 @@
-# 页间 · Pageglade 1.0.4 安装与使用
+# 页间 · Pageglade 1.6.6 安装说明
 
-作者：TaylorWang。适用 Apple Silicon Mac / macOS 14+。应用显示名称 Pageglade；展示 Logo 为绿色繁体“頁間”。
+## 适用范围
 
-## 安装和更新
+Apple Silicon Mac（M1 及后续），macOS 14+。当前没有 Intel 安装包，也未上架 App Store。
 
-退出旧版应用，打开 DMG，将 Pageglade 拖入 Applications，更新时选择替换。书库、历史、书签和设置由应用的数据目录保存，替换程序本身不会主动清空它们。
+## 下载与校验
 
-本版未使用 Developer ID 发布签名和 Apple 公证，未上架 App Store。若 macOS 阻止打开，先核对发布来源与 SHA-256 校验信息。确认信任后按 Apple 官方指引，在“系统设置 → 隐私与安全性”查看是否出现“仍要打开”。不需要关闭系统安全保护。说明：https://support.apple.com/102445
+在 [1.6.6 发布页](https://github.com/yuwang4321/Pageglade/releases/tag/v1.6.6) 的 Assets 中下载：
 
-## 阅读和整理
+- `Pageglade-1.6.6-arm64.dmg`
+- `Pageglade-1.6.6-arm64.dmg.sha256`
 
-“导入 → 选择文件”或 ⌘O 可多选文件，也可选择文件夹。图片文件夹作为漫画读取，含电子书的文件夹可批量导入。支持 PDF、EPUB、TXT、无 DRM MOBI/AZW/AZW3/PRC、漫画压缩包、图片文件夹；完整兼容范围只在“应用设置 → 格式与兼容性”展示。DRM、KFX、DJVU、CHM、AZW4 暂不支持。
+不要下载自动生成的 Source code 压缩包用于安装，它们仅包含当前仓库的介绍和发行资料。
 
-顶部标签栏用于切换和关闭同时打开的书。标签支持新增、改名、删除，一本书可拥有多个标签。收藏与历史记录用于找回读过的书；历史整行可点击继续阅读，右侧垃圾桶只删除这一条历史。
+SHA-256：
 
-阅读顶部支持缩放、适合页面、适合宽度和原尺寸。PDF/漫画保留源版面；文字格式提供字号。单页、双页、翻页、滚动、纸张主题可在“本书阅读设置”调整并自动保存。新书或未自定义书籍继承“应用设置 → 默认阅读设置”，修改默认值不覆盖本书配置。“恢复默认”清除当前书的独立配置。
+```text
+398eb5e773cd965235e0bfe57b9ff2f2296bf078f710de1d0aab3021f77662f1  Pageglade-1.6.6-arm64.dmg
+```
 
-目录仅显示源文件内置目录；缩略图提供页/章节预览。书签有独立入口，支持添加、跳转和逐条删除。文字书签保存正文位置，古籍书签保存叶位；旧书签仍可使用。通过目录、书签或位置跳转后，点击“返回原位置”逐次返回（每本书最近 20 次，本会话内有效）。改变源文件或切换不同排版可能影响锚点精度。
+需要自行校验时，在终端运行 `shasum -a 256` 并将下载的 DMG 拖入终端，核对结果与上面的值一致。
 
-古籍模式使用右起竖排、12/16/20 列、统一灰米色底、四张轮换纸纹和淡朱印。PDF、漫画和扫描页不重排。纸纹在同一叶保持稳定，不定时动画。
+## 安装或升级
 
-窗口全屏与沉浸阅读不同；沉浸阅读隐藏固定界面，移到屏幕边缘或按 Tab 可调出操作栏，Esc 退出。
+1. 升级前建议在旧版应用设置中导出阅读数据备份；原始书籍另行保管，备份不包含原书和缓存。
+2. 退出已运行的 Pageglade。
+3. 打开 DMG，将 Pageglade 拖入 Applications；已有版本选择替换。
+4. 从 Applications 打开应用。替换程序不会主动清空书库、历史、书签、摘录和阅读设置。
 
-## 快捷键
+本版未进行 Developer ID 发行签名或 Apple 公证。若系统提示开发者无法验证，请先确认 GitHub 来源与校验值；确认信任后，参考 [Apple 的打开应用说明](https://support.apple.com/102445)，在「系统设置 → 隐私与安全性」查看可用的打开选项。无需关闭 Gatekeeper、SIP 或其他系统安全保护。若出现损坏提示或校验不一致，请重新下载，不要直接跳过检查。
 
-← / →、Page Up / Down：翻页。空格下一页，Shift+空格上一页；沉浸滚动模式空格滚动。
-⌘F：书库搜索或书内查找。⌘⇧T：标签。⌘B：添加当前位置书签。⌘W：关闭当前阅读标签。
-⌘⇧P：沉浸阅读。⌃⌘F：窗口全屏。Esc：收起面板、关闭普通弹窗或退出沉浸。
+## 阅读与摘录
 
-## 数据、组件与限制
+- 导入入口选择文件或文件夹。阅读设置采用全局默认，调整后记住本书配置。
+- 「摘录」仅展示文字/图片摘录和批注；「摘录集」展示已保存集合。
+- 新摘录默认沿用来源书籍标签，保存时可调整。创建集合时，单标签或多标签匹配只保留符合条件的候选与勾选项。
+- 沉浸阅读底部图标工具栏可用鼠标靠近边缘或 Tab 唤出；图片捕获时暂时锁定，Esc 优先取消圈选。
+- 自动状态：实际翻页/滚动后在读，自然到末尾前台停留约10秒后已读，支持撤销；手动设置优先，可恢复自动判断。
 
-书籍与记录保存在本机。缓存包括导入副本、解包图片、页面预览和转换组件运行副本；清缓存保留原文件、书库记录和书签，再打开时从原文件生成。退出重开恢复阅读标签与位置。
+## 数据与组件
 
-本地版自带 calibre，不要求另行安装。DMG 提供该组件的许可和对应源码。卸载设置可将程序与内置组件一并移入废纸篓，个人阅读数据是否清理由用户选择；不移除其他独立安装的 calibre，也不移除原始书籍。
+书籍副本、阅读记录与设置存放本机。清理生成缓存不删除源文件；移出书库会移除该书相关记录，请先导出或备份需要保留的摘录。
 
-无 OCR、无云同步；复杂排版可能丢失，扫描图片没有可搜索文字，受 DRM 保护文件不支持。翻页效果是轻量过渡，不是纸张物理模拟。不同文件的缩放结果取决于原版面与窗口尺寸。
+本地 DMG 内置 calibre 组件，无需额外安装；组件许可与对应源码位于 DMG 的「开源组件」目录。Pageglade 应用源码未公开。复杂书籍可能有兼容性问题；不支持 DRM、OCR 或云同步。
+
+## English installation summary
+
+Download the DMG from the release Assets, verify its SHA-256, quit the old app and drag Pageglade into Applications. Requires Apple Silicon and macOS 14+. Back up reading data before upgrading; book originals are not included in the backup. This build is not Developer ID signed or notarized. Verify the source and follow Apple's opening guidance; do not disable system security protections.
